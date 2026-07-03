@@ -1,3 +1,31 @@
+
+<!-- Dark/Light toogle Start -->
+
+body.light-mode{
+background:#f5f7fb;
+color:#111;
+}
+
+body.light-mode nav{
+background:white;
+}
+
+body.light-mode nav a{
+color:#111;
+}
+
+body.light-mode .card{
+background:white;
+color:#111;
+}
+
+body.light-mode .skills div{
+background:#e5e7eb;
+color:#111;
+}
+
+<!-- Dark/Light toogle End -->
+
 *{
 margin:0;
 padding:0;
