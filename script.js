@@ -1,11 +1,22 @@
-const cards=document.querySelectorAll(".card");
+const toggleBtn = document.getElementById("themeToggle");
+const body = document.body;
 
-cards.forEach(card=>{
+// check saved theme
+if(localStorage.getItem("theme") === "light"){
+body.classList.add("light-mode");
+toggleBtn.textContent = "☀️";
+}
 
-card.addEventListener("mouseover",()=>{
+toggleBtn.addEventListener("click", () => {
 
-card.style.cursor="pointer";
+body.classList.toggle("light-mode");
 
-});
+if(body.classList.contains("light-mode")){
+toggleBtn.textContent = "☀️";
+localStorage.setItem("theme", "light");
+}else{
+toggleBtn.textContent = "🌙";
+localStorage.setItem("theme", "dark");
+}
 
 });
