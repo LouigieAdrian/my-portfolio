@@ -119,15 +119,15 @@ navMenu.classList.remove("active");
 
 const roles = [
 
-"IT Support Specialist",
+"💻 IT Support Specialist",
 
-"Network Engineer",
+"🌐 Network Engineer",
 
-"Power BI Developer",
+"📊 Power BI Developer",
 
-"System Administrator",
+"🖥️ System Administrator",
 
-"Technical Support Engineer"
+"🔒 IT Infrastructure Engineer"
 
 ];
 
