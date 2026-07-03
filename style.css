@@ -446,3 +446,147 @@ width:100%;
 
 }
 
+/* ===========================
+   Navigation
+=========================== */
+
+nav{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px 10%;
+
+background:#111827;
+
+position:sticky;
+top:0;
+
+z-index:999;
+
+}
+
+.logo{
+
+color:#38bdf8;
+
+}
+
+/* Navigation Links */
+
+.nav-menu{
+
+display:flex;
+align-items:center;
+gap:30px;
+
+list-style:none;
+
+}
+
+.nav-menu a{
+
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:.3s;
+
+}
+
+.nav-menu a:hover{
+
+color:#38bdf8;
+
+}
+
+/* Hamburger */
+
+.hamburger{
+
+display:none;
+cursor:pointer;
+
+}
+
+.hamburger span{
+
+display:block;
+
+width:28px;
+height:3px;
+
+margin:6px;
+
+background:white;
+
+transition:.4s;
+
+border-radius:5px;
+
+}
+
+/* Animation */
+
+.hamburger.active span:nth-child(1){
+
+transform:rotate(45deg) translate(7px,6px);
+
+}
+
+.hamburger.active span:nth-child(2){
+
+opacity:0;
+
+}
+
+.hamburger.active span:nth-child(3){
+
+transform:rotate(-45deg) translate(7px,-6px);
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.hamburger{
+
+display:block;
+
+}
+
+.nav-menu{
+
+position:absolute;
+
+top:80px;
+left:-100%;
+
+width:100%;
+
+background:#111827;
+
+flex-direction:column;
+
+padding:30px 0;
+
+transition:.4s;
+
+}
+
+.nav-menu.active{
+
+left:0;
+
+}
+
+.nav-menu li{
+
+margin:15px 0;
+
+}
+
+}
