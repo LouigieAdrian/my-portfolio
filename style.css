@@ -292,4 +292,16 @@ animation:pulse 3s infinite;
 100%{box-shadow:0 0 0 rgba(56,189,248,0.4);}
 }
 
+
+section{
+opacity:0;
+transform:translateY(30px);
+transition:all 0.8s ease-out;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
 <!-- Hero End -->
