@@ -563,7 +563,9 @@ display:block;
 position:absolute;
 
 top:80px;
-left:-100%;
+opacity:0;
+visibility:hidden;
+transform:translateY(-20px);
 
 width:100%;
 
@@ -579,7 +581,9 @@ transition:.4s;
 
 .nav-menu.active{
 
-left:0;
+opacity:1;
+visibility:visible;
+transform:translateY(0);
 
 }
 
