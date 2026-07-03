@@ -239,4 +239,15 @@ transition:0.3s;
 .profile-pic:hover{
 transform:scale(1.05);
 }
+
+.profile-pic{
+animation:pulse 3s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 rgba(56,189,248,0.4);}
+50%{box-shadow:0 0 30px rgba(56,189,248,0.7);}
+100%{box-shadow:0 0 0 rgba(56,189,248,0.4);}
+}
+
 <!-- Hero End -->
