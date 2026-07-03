@@ -63,3 +63,33 @@ bar.style.width = width;
 fills.forEach(fill => {
 skillObserver.observe(fill);
 });
+
+const navLinks = document.querySelectorAll(".nav-link");
+const sectionsTrack = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+
+let current = "";
+
+sectionsTrack.forEach(section => {
+
+const sectionTop = section.offsetTop - 120;
+const sectionHeight = section.clientHeight;
+
+if(window.scrollY >= sectionTop){
+current = section.getAttribute("id");
+}
+
+});
+
+navLinks.forEach(link => {
+
+link.classList.remove("active");
+
+if(link.getAttribute("href") === "#" + current){
+link.classList.add("active");
+}
+
+});
+
+});
