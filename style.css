@@ -594,3 +594,39 @@ margin:15px 0;
 }
 
 }
+
+#typing{
+
+color:#38bdf8;
+
+font-weight:600;
+
+font-size:30px;
+
+}
+
+.cursor{
+
+display:inline-block;
+
+color:#38bdf8;
+
+animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+0%{
+opacity:1;
+}
+
+50%{
+opacity:0;
+}
+
+100%{
+opacity:1;
+}
+
+}
