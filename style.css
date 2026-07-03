@@ -24,6 +24,20 @@ background:#e5e7eb;
 color:#111;
 }
 
+#themeToggle{
+background:none;
+border:none;
+color:white;
+font-size:22px;
+cursor:pointer;
+margin-left:20px;
+transition:0.3s;
+}
+
+body.light-mode #themeToggle{
+color:black;
+}
+
 <!-- Dark/Light toogle End -->
 
 *{
