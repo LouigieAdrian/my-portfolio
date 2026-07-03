@@ -40,3 +40,26 @@ threshold: 0.15
 sections.forEach(section => {
 observer.observe(section);
 });
+
+
+const fills = document.querySelectorAll(".fill");
+
+const skillObserver = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+const bar = entry.target;
+const width = bar.getAttribute("data-width");
+bar.style.width = width;
+
+}
+
+});
+
+}, { threshold: 0.3 });
+
+fills.forEach(fill => {
+skillObserver.observe(fill);
+});
