@@ -57,20 +57,20 @@ line-height:1.7;
 }
 
 nav{
-
 display:flex;
 justify-content:space-between;
 align-items:center;
 
-padding:20px 10%;
+height:70px;
+
+padding:0 8%;
+
+background:#111827;
 
 position:sticky;
 top:0;
 
-background:#111827;
-
-z-index:1000;
-
+z-index:999;
 }
 
 nav h2{
