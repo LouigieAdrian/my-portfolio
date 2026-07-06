@@ -3,7 +3,7 @@ const body = document.body;
 
 // check saved theme
 if(localStorage.getItem("theme") === "light"){
-body.classList.add("light-mode");
+body.classList.add("light-mode"); 
 toggleBtn.textContent = "☀️";
 }
 
