@@ -249,3 +249,40 @@ particles_nb:4
 retina_detect:true
 
 });
+
+
+const projectImages = document.querySelectorAll(".project-image");
+
+const lightbox = document.getElementById("lightbox");
+
+const lightboxImg = document.getElementById("lightbox-img");
+
+const closeBtn = document.querySelector(".close");
+
+projectImages.forEach(image => {
+
+image.addEventListener("click", () => {
+
+lightbox.classList.add("active");
+
+lightboxImg.src = image.src;
+
+});
+
+});
+
+closeBtn.addEventListener("click", () => {
+
+lightbox.classList.remove("active");
+
+});
+
+lightbox.addEventListener("click", e => {
+
+if(e.target === lightbox){
+
+lightbox.classList.remove("active");
+
+}
+
+});
