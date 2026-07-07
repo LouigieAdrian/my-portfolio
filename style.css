@@ -1,5 +1,5 @@
 
-<!-- Dark/Light toogle Start -->
+/* Dark light toogle */
 
 body.light-mode{ 
 background:#f5f7fb;
@@ -38,7 +38,141 @@ body.light-mode #themeToggle{
 color:black;
 }
 
-<!-- Dark/Light toogle End -->
+/* Dark Light toogle End */
+
+/*=========================
+    EXPERIENCE
+==========================*/
+
+#experience{
+
+padding:100px 10%;
+
+}
+
+#experience h2{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.timeline{
+
+position:relative;
+
+max-width:900px;
+
+margin:auto;
+
+padding-left:40px;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:15px;
+
+top:0;
+
+width:4px;
+
+height:100%;
+
+background:#38bdf8;
+
+border-radius:10px;
+
+}
+
+.timeline-item{
+
+position:relative;
+
+margin-bottom:50px;
+
+}
+
+.timeline-dot{
+
+position:absolute;
+
+left:-33px;
+
+top:5px;
+
+width:18px;
+
+height:18px;
+
+background:#38bdf8;
+
+border-radius:50%;
+
+box-shadow:0 0 15px rgba(56,189,248,.5);
+
+}
+
+.timeline-content{
+
+background:rgba(255,255,255,.06);
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,.12);
+
+padding:25px;
+
+border-radius:18px;
+
+transition:.35s;
+
+}
+
+.timeline-content:hover{
+
+transform:translateX(10px);
+
+box-shadow:0 15px 30px rgba(56,189,248,.25);
+
+}
+
+.timeline-content h3{
+
+color:#38bdf8;
+
+margin-bottom:5px;
+
+}
+
+.timeline-content h4{
+
+margin-bottom:8px;
+
+}
+
+.timeline-content span{
+
+font-size:14px;
+
+color:#94a3b8;
+
+display:block;
+
+margin-bottom:15px;
+
+}
+
+.timeline-content p{
+
+line-height:1.8;
+
+}
 
 *{
 margin:0;
@@ -670,6 +804,37 @@ width:100%;
 
 width:250px;
 justify-content:center;
+
+}
+
+}
+/*=========================
+    EXPERIENCE Mobile
+==========================*/
+
+@media(max-width:768px){
+
+.timeline{
+
+padding-left:30px;
+
+}
+
+.timeline-content{
+
+padding:18px;
+
+}
+
+.timeline::before{
+
+left:10px;
+
+}
+
+.timeline-dot{
+
+left:-38px;
 
 }
 
