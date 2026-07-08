@@ -51,6 +51,74 @@ color:black;
 
 /* Dark Light toogle End */
 
+/*==============================
+    STATISTICS
+===============================*/
+
+#stats{
+
+padding:60px 10%;
+
+}
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+.stat-card{
+
+background:rgba(255,255,255,.06);
+
+backdrop-filter:blur(12px);
+
+-webkit-backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:18px;
+
+padding:30px;
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-8px);
+
+border-color:#38bdf8;
+
+box-shadow:0 15px 35px rgba(56,189,248,.25);
+
+}
+
+.stat-card h2{
+
+font-size:48px;
+
+color:#38bdf8;
+
+margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+font-size:17px;
+
+color:#cbd5e1;
+
+}
+
 /*=========================
     EXPERIENCE
 ==========================*/
