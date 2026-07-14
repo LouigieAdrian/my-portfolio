@@ -952,6 +952,22 @@ text-align:center;
 margin-bottom:60px;
 }
 
+#gallery .section-subtitle{
+
+max-width:700px;
+
+margin:20px auto 60px;
+
+color:#94a3b8;
+
+font-size:18px;
+
+line-height:1.7;
+
+text-align:center;
+
+}
+
 .gallery-grid{
 
 display:grid;
