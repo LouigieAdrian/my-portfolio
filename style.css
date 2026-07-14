@@ -945,6 +945,13 @@ text-align:cente;
 
 }
 
+#gallery h2{
+
+text-align:center;
+
+margin-bottom:60px;
+}
+
 .gallery-grid{
 
 display:grid;
