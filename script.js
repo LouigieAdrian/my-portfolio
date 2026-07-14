@@ -9,7 +9,7 @@ toggleBtn.textContent = "☀️";
 
 toggleBtn.addEventListener("click", () => {
  
-body.classList.toggle("light-mode");
+body.classList.toggle("light-mode"); 
 
 if(body.classList.contains("light-mode")){
 toggleBtn.textContent = "☀️";
