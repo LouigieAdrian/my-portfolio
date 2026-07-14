@@ -1,7 +1,7 @@
 const toggleBtn = document.getElementById("themeToggle");
 const body = document.body;
 
-// check saved theme
+// check saved theme 
 if(localStorage.getItem("theme") === "light"){
 body.classList.add("light-mode");  
 toggleBtn.textContent = "☀️";
