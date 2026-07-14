@@ -6,7 +6,7 @@ if(localStorage.getItem("theme") === "light"){
 body.classList.add("light-mode");  
 toggleBtn.textContent = "☀️";
 }
-
+ 
 toggleBtn.addEventListener("click", () => {
  
 body.classList.toggle("light-mode"); 
