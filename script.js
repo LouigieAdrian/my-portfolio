@@ -318,28 +318,3 @@ counters.forEach(counter => {
 
 });
 
-const galleryCards = document.querySelectorAll(".gallery-card");
-
-const galleryObserver = new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-},{
-threshold:.2
-});
-
-galleryCards.forEach((card,index)=>{
-
-card.style.transitionDelay=`${index*0.15}s`;
-
-galleryObserver.observe(card);
-
-});
