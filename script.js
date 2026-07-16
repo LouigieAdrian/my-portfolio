@@ -319,50 +319,46 @@ counters.forEach(counter => {
 });
 
 
-const track = document.querySelector(".carousel-track");
-const next = document.querySelector(".next");
-const prev = document.querySelector(".prev");
+document.addEventListener("DOMContentLoaded", function () {
 
-const cards = document.querySelectorAll(".carousel-card");
+    const track = document.querySelector(".carousel-track");
+    const next = document.querySelector(".next");
+    const prev = document.querySelector(".prev");
 
-const cardWidth = 360;
+    if (!track) return;
 
-let current = 0;
+    const cards = document.querySelectorAll(".carousel-card");
 
-next.addEventListener("click",()=>{
+    let current = 0;
 
-    if(current < cards.length-3){
+    const cardWidth = cards[0].offsetWidth + 20;
 
+    function moveCarousel() {
+        track.style.transform = `translateX(-${current * cardWidth}px)`;
+    }
+
+    next.addEventListener("click", () => {
         current++;
 
-    }else{
+        if (current > cards.length - 3) {
+            current = 0;
+        }
 
-        current=0;
+        moveCarousel();
+    });
 
-    }
-
-    track.style.transform=`translateX(-${current*cardWidth}px)`;
-
-});
-
-prev.addEventListener("click",()=>{
-
-    if(current>0){
-
+    prev.addEventListener("click", () => {
         current--;
 
-    }else{
+        if (current < 0) {
+            current = cards.length - 3;
+        }
 
-        current=cards.length-3;
+        moveCarousel();
+    });
 
-    }
-
-    track.style.transform=`translateX(-${current*cardWidth}px)`;
+    setInterval(() => {
+        next.click();
+    }, 3000);
 
 });
-
-setInterval(()=>{
-
-    next.click();
-
-},4000);
