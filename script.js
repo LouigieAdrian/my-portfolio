@@ -317,3 +317,52 @@ counters.forEach(counter => {
     updateCounter();
 
 });
+
+
+const track = document.querySelector(".carousel-track");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
+
+const cards = document.querySelectorAll(".carousel-card");
+
+const cardWidth = 360;
+
+let current = 0;
+
+next.addEventListener("click",()=>{
+
+    if(current < cards.length-3){
+
+        current++;
+
+    }else{
+
+        current=0;
+
+    }
+
+    track.style.transform=`translateX(-${current*cardWidth}px)`;
+
+});
+
+prev.addEventListener("click",()=>{
+
+    if(current>0){
+
+        current--;
+
+    }else{
+
+        current=cards.length-3;
+
+    }
+
+    track.style.transform=`translateX(-${current*cardWidth}px)`;
+
+});
+
+setInterval(()=>{
+
+    next.click();
+
+},4000);
