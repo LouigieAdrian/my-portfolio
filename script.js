@@ -317,4 +317,3 @@ counters.forEach(counter => {
     updateCounter();
 
 });
-
