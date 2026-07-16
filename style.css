@@ -827,7 +827,7 @@ text-align:center;
 
 }
 
-.projects-grid{
+.project-grid{
 
 display:grid;
 
@@ -1414,7 +1414,9 @@ box-shadow:0 0 20px #38bdf855;
 text-align:center;
 
 }
-<!-- Hero Start -->
+/* ===========================
+   Hero Start
+=========================== */
 .hero-content{
 
 display:flex;
@@ -1486,7 +1488,9 @@ opacity:1;
 transform:translateY(0) scale(1);
 }
 
-<!-- Hero End -->
+/* ===========================
+   Hero End
+=========================== */
 
 .skill{
 max-width:800px;
@@ -1653,8 +1657,6 @@ z-index:999;
 
 color:#38bdf8;
 padding-top: 100px;
-}
-
 }
 
 /* Navigation Links */
