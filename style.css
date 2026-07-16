@@ -1103,6 +1103,18 @@ right:10px;
 
 }
 
+@media(max-width:768px){
+
+.carousel-card{
+
+min-width:280px;
+
+height:200px;
+
+}
+
+}
+
 /*==============================
     CERTIFICATIONS
 ===============================*/
