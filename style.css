@@ -957,6 +957,13 @@ overflow:hidden;
 
 }
 
+#gallery h2{
+
+text-align:center;
+
+margin-bottom:60px;
+}
+
 .gallery-row{
 
 overflow:hidden;
