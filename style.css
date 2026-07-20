@@ -951,57 +951,85 @@ text-decoration:underline;
 
 #gallery{
 
-padding:120px 8%;
+padding:120px 0;
 
 overflow:hidden;
 
 }
 
-.carousel-container{
+.gallery-row{
 
-position:relative;
+overflow:hidden;
+
+margin:30px 0;
+
+mask-image:linear-gradient(to right,
+transparent,
+black 8%,
+black 92%,
+transparent);
+
+-webkit-mask-image:linear-gradient(to right,
+transparent,
+black 8%,
+black 92%,
+transparent);
+
+}
+
+.gallery-track{
 
 display:flex;
 
-align-items:center;
+width:max-content;
 
-overflow:hidden;
+gap:25px;
 
-margin-top:50px;
-
-}
-
-.carousel-track{
-
-display:flex;
-
-gap:20px;
-
-transition:transform .6s ease;
+animation:scrollLeft 35s linear infinite;
 
 }
 
-.carousel-card{
+.gallery-row.reverse .gallery-track{
 
-min-width:340px;
+animation:scrollRight 35s linear infinite;
 
-height:240px;
+}
 
-border-radius:20px;
+.gallery-row:hover .gallery-track{
 
-overflow:hidden;
+animation-play-state:paused;
+
+}
+
+.gallery-card{
 
 position:relative;
 
-background:#1e293b;
+width:340px;
 
-box-shadow:0 15px 35px rgba(0,0,0,.25);
+height:230px;
+
+overflow:hidden;
+
+border-radius:18px;
 
 flex-shrink:0;
 
+background:#111827;
+
+box-shadow:0 12px 35px rgba(0,0,0,.25);
+
+transition:.4s;
+
 }
 
-.carousel-card img{
+.gallery-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.gallery-card img{
 
 width:100%;
 
@@ -1013,108 +1041,83 @@ transition:.5s;
 
 }
 
-.carousel-card:hover img{
+.gallery-card:hover img{
 
 transform:scale(1.08);
 
 }
 
-.overlay{
+.gallery-card span{
 
 position:absolute;
 
-left:0;
+bottom:15px;
 
-right:0;
+left:15px;
 
-bottom:0;
+padding:8px 16px;
 
-padding:20px;
+border-radius:30px;
 
-background:linear-gradient(transparent,rgba(0,0,0,.9));
+background:rgba(15,23,42,.75);
 
-transform:translateY(100%);
-
-transition:.35s;
-
-}
-
-.carousel-card:hover .overlay{
-
-transform:translateY(0);
-
-}
-
-.overlay h3{
+backdrop-filter:blur(12px);
 
 color:#fff;
 
-font-size:18px;
+font-size:14px;
 
 }
 
-.carousel-btn{
+@keyframes scrollLeft{
 
-position:absolute;
+from{
 
-top:50%;
-
-transform:translateY(-50%);
-
-width:50px;
-
-height:50px;
-
-border:none;
-
-border-radius:50%;
-
-cursor:pointer;
-
-background:rgba(15,23,42,.85);
-
-color:#38bdf8;
-
-font-size:20px;
-
-z-index:10;
-
-transition:.3s;
+transform:translateX(0);
 
 }
 
-.carousel-btn:hover{
+to{
 
-background:#38bdf8;
-
-color:#fff;
+transform:translateX(-50%);
 
 }
 
-.prev{
+}
 
-left:10px;
+@keyframes scrollRight{
+
+from{
+
+transform:translateX(-50%);
 
 }
 
-.next{
+to{
 
-right:10px;
+transform:translateX(0);
+
+}
 
 }
 
 @media(max-width:768px){
 
-.carousel-card{
+.gallery-card{
 
-min-width:280px;
+width:260px;
 
-height:200px;
+height:180px;
+
+}
+
+.gallery-track{
+
+animation-duration:25s;
 
 }
 
 }
-
 /*==============================
     CERTIFICATIONS
 ===============================*/
