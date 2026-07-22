@@ -149,6 +149,12 @@ padding-left:40px;
 
 }
 
+.timeline-content a {
+    display: block;
+    text-align: end;
+   color: #38bdf8; /* sky blue */
+}
+
 .timeline::before{
 
 content:"";
